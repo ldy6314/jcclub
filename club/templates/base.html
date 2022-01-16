@@ -2,9 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>俱乐部报名</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/bootstrap.min.css')}}">
 </head>
 <body>
+{% block navbar %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">俱乐部</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item  active ">
+        <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">学生报名</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">班级管理</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">校园管理</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav my-2">
+        <li class="nav-item">
+        <a class="nav-link" href="#">登录</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#">注销</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+{% block content%}
+<h1>我是首页</h1>
+{% endblock %}
+{% block script %}
+    <script src="{{url_for('static', filename='/js/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{url_for('static',filename='/js/bootstrap.min.js')}}"></script>
+{% endblock %}
 </body>
 </html>

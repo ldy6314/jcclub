@@ -1,8 +1,8 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 club_bp = Blueprint('base', __name__)
 
 
 @club_bp.route('/')
 def index():
-    return "I am base"
+    return render_template("base.html")
